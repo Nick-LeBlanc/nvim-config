@@ -162,15 +162,7 @@ vim.opt.confirm = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
--- NOTE: My Remaps
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('n', '<leader>hm', vim.cmd.Ex)
-vim.keymap.set('x', '<leader>p', [["_dP]])
-
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
-vim.keymap.set('n', '<leader>Y', [["+Y]])
-
+-- ''
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch` vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -1018,6 +1010,7 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   { import = 'custom.plugins' },
   { import = 'custom.colors' },
+  { import = 'custom.remaps' },
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
